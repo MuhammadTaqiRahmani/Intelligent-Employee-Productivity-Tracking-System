@@ -1,7 +1,7 @@
 # Report Figures
 
 Figures referenced by the Final Year Project report
-(*Intelligent Employee Productivity Tracking System — Draft A*).
+(*Intelligent Employee Productivity Tracking System*).
 
 Figures 1–9 are provided as **SVG** (vector, zoom without quality loss — best for
 reading detail) and **PNG** (raster, for embedding). Figure 6 is a screenshot and
