@@ -1,0 +1,54 @@
+# Report Figures
+
+Figures referenced by the Final Year Project report
+(*Intelligent Employee Productivity Tracking System — Draft A*).
+
+Each figure is provided as **SVG** (vector, zoom without quality loss — best for
+reading detail) and **PNG** (raster, for embedding). Figure 6 is a screenshot and
+is PNG only.
+
+Most figures are embedded directly in the report document. Figures 1 and 8 are
+too tall to fit a page at a readable size, so the report links here instead.
+
+| # | Figure | Files | In report |
+|---|---|---|---|
+| 1 | End-to-end architecture — capture, store, aggregate, predict, serve | [SVG](figure-01-end-to-end-architecture.svg) · [PNG](figure-01-end-to-end-architecture.png) | §3.2 — linked |
+| 2 | Endpoint tracker topology on a monitored machine | [SVG](figure-02-endpoint-tracker-topology.svg) · [PNG](figure-02-endpoint-tracker-topology.png) | §3.3 — embedded |
+| 3 | Watermark-driven aggregation into the three feature tables | [SVG](figure-03-watermark-aggregation.svg) · [PNG](figure-03-watermark-aggregation.png) | §3.5 — embedded |
+| 4 | Canonical device-centric identity resolution | [SVG](figure-04-canonical-identity.svg) · [PNG](figure-04-canonical-identity.png) | §3.6 — embedded |
+| 5 | Cheat-detection training and synthetic-injection design | [SVG](figure-05-cheat-detection-design.svg) · [PNG](figure-05-cheat-detection-design.png) | §3.8 — embedded |
+| 6 | Dashboard results page showing per-split model metrics | [PNG](figure-06-dashboard-results.png) | §3.11 — embedded |
+| 7 | Server deployment topology | [SVG](figure-07-deployment-topology.svg) · [PNG](figure-07-deployment-topology.png) | §4.6 — embedded |
+| 8 | Per-user chronological train / validation / test split | [SVG](figure-08-chronological-split.svg) · [PNG](figure-08-chronological-split.png) | §5.3 — linked |
+| 9 | Cheat-detection recovery path across two defects | [SVG](figure-09-defect-recovery-path.svg) · [PNG](figure-09-defect-recovery-path.png) | §5.5 — embedded |
+
+## What the figures show
+
+**Figure 1** traces the whole system: five Rust endpoint services → pooled central
+PostgreSQL → three server-side aggregation pipelines at three time granularities
+→ three models → versioned prediction tables → read-only API → dashboard.
+
+**Figure 3** shows why aggregation is safe to re-run: each pipeline reads its own
+watermark, processes only new windows per device, and advances the watermark only
+on success. The disk guard prunes only behind the minimum of all three.
+
+**Figure 4** documents a real defect and its correction — two participants shared
+a Windows username and collapsed into one analytical subject. Device
+qualification is applied *selectively*, only where a collision exists.
+
+**Figure 5** shows why the first cheat-detection evaluation returned 0.52 (chance):
+forcing perfect input regularity produced "anomalies" indistinguishable from the
+22% of ordinary windows that already have zero interval variance. The corrected
+design requires volume *and* regularity together over contiguous episodes.
+
+**Figure 9** is the shortest summary of the engineering story: two independent
+defects each held the model at chance, and fixing only one was not enough.
+
+## Source
+
+Editable Mermaid source for figures 1–5 and 7–9 is in
+`docs/report-source/DIAGRAMS.md` in the project working tree. Figure 6 is a
+screenshot of the live dashboard.
+
+Related: [`../diagrams/`](../diagrams/) holds the architecture diagrams
+referenced from `docs/SYSTEM_ARCHITECTURE.md`.
