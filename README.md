@@ -13,6 +13,7 @@ idle, and whether capability is improving over time — three questions that eac
 need a different kind of evidence, and therefore a different model.
 
 **Live dashboard:** [pta.emotionflow.site](https://pta.emotionflow.site)
+**Full FYP report:** [`report/`](report/) — objective, solution and results, with the complete document to download.
 
 ---
 
