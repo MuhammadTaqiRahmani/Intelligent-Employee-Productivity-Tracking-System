@@ -3,7 +3,11 @@
 **Intelligent Employee Productivity Tracking System (PTA)**
 Department of Software Engineering, Sir Syed University of Engineering & Technology
 
-📄 **[Download the full report (Word)](Intelligent-Employee-Productivity-Tracking-System-FYP-Report.docx)** — complete document with title pages, certificate, all chapters, figures and tables.
+📄 **[Read the full report (PDF)](Intelligent-Employee-Productivity-Tracking-System-FYP-Report.pdf)** — opens in the browser, no download needed.
+📝 **[Editable version (Word)](Intelligent-Employee-Productivity-Tracking-System-FYP-Report.docx)** — the authoritative source document.
+
+> The PDF is generated from the Word file for convenient in-browser reading; a few
+> wide tables reflow slightly. For exact formatting, use the Word version.
 
 This page is the report in brief: what problem it solves, how, what was actually
 achieved, and — just as deliberately — what it does not claim. The full technical
@@ -102,7 +106,7 @@ Stated plainly in the report, because a result is only as honest as its boundari
 
 ## Report structure
 
-The full document ([download](Intelligent-Employee-Productivity-Tracking-System-FYP-Report.docx))
+The full document ([PDF](Intelligent-Employee-Productivity-Tracking-System-FYP-Report.pdf) · [Word](Intelligent-Employee-Productivity-Tracking-System-FYP-Report.docx))
 follows the university FYP template:
 
 | Chapter | Contents |
