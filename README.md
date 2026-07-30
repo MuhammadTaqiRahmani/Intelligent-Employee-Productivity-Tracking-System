@@ -62,6 +62,7 @@ work-weighting.
 | [System Architecture & Design](docs/SYSTEM_ARCHITECTURE.md) | End-to-end design reference, with diagrams |
 | [Endpoint Trackers](docs/01-TRACKER-ENDPOINTS.md) | The five capture services + launcher: what each records and how |
 | [Backend API & Database](docs/02-BACKEND-API-AND-DATABASE.md) | Storage layers, canonical identity, feature aggregation, pooling, the Axum API, deployment |
+| [Data Engineering (two-phase)](docs/05-DATA-ENGINEERING.md) | Phase 1 server-side aggregation and Phase 2 model-side preprocessing: the methods and techniques of each |
 | [ML Models](docs/03-ML-MODELS.md) | Design, algorithm per layer, and preprocessing for CDM / PSM / GPRM |
 | [Results](docs/04-RESULTS.md) | Consolidated numbers, generalisation evidence, defects fixed, and limits |
 | [Architecture Diagrams](docs/architecture-diagrams.md) | Diagram sources |
